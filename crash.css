@@ -1,0 +1,249 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    background-color: #3047a3;
+    height: 100vh;
+    isolation: isolate;
+   
+}
+
+.nav { 
+    height: 13vh ;
+    width: 90% ;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+} 
+.logo img{
+    height: 65px;
+}
+.navlist {
+    display: flex;
+}
+.navlist li{
+    list-style: none;
+    text-transform: uppercase;
+    padding: 20px;
+    
+}
+.navlist li a{
+    text-decoration: none;
+    font-size: 16px;
+    color:white;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/*------------ button------------*/
+
+.click button:nth-child(1),.click button:nth-child(2) {
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    font-size: 18px;
+
+}
+
+.click button:nth-child(1) {
+    background-color:#f0b033;
+    color: white;
+    border-radius: 2px soild #f0b033;
+}
+ 
+.click button:nth-child(2) {
+    background-color: transparent;
+    color: #f0b033;
+    border-radius: 2px soild #f0b033;
+    margin-left: 10px;
+
+}
+.click button:nth-child(1):hover{
+    background-color: transparent;
+    color: #f0b033;
+}
+.click button:nth-child(2):hover{
+    background-color: #f0b033;
+    color: white;
+}
+
+.navlist a::before{
+    content: "";
+    background-color: rgb(255, 242,0 );
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 10px;
+    transition:.5s ease-in-out;
+ 
+}
+.navlist a:hover::before{
+    width:50%;
+} 
+.active::before{
+    content: "";
+    background-color: rgb(255, 242,0 );
+    width:50%;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 10px;
+}
+/*----*------circle -------------*/
+
+
+.circle{
+   width: 700px; 
+   height: 700px;
+   border-radius: 50%;
+   position: absolute;
+   background-color:red;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   z-index: -1;
+    animation: circle 10s linear ;
+}
+
+@keyframes circle {
+  0% {
+    transform: translate(-50%,-50%) rotate(0deg);
+   }
+   50% {
+    transform: translate(-50%,-50%) rotate(180deg);
+    background-color: black;
+   }
+   100% {
+    transform: translate(-50%,-50%) rotate(360deg);
+    background-color: #f0b033;
+   
+   }
+}
+
+.circle:hover{
+    background-color:black;
+}
+
+
+.circle::before {
+    content: "";
+    background-image:url(assets/farm.jpg) ;
+    background-position: center;
+    background-size: cover;
+    width:450px;
+    height:450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+ }
+ 
+ .circle::after {
+    content: "";
+    width:480px;
+    height:480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.515);
+    backdrop-filter: blur(3px);
+ }
+
+
+/*----------hero section---------- */
+
+ #hero{
+   /* background-color: red;*/
+    display: flex;
+    align-items: center;
+    height: 87vh;
+    width: 50%;
+    padding-left:50px ;
+ }
+ #contain h1{
+    font-size: 60px;
+    font-weight: 400px;
+    color: white;
+    font-family: cursive;
+
+ }
+ #contain p{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    max-width: 40%;
+    padding: 30px 0px 50px 0px;
+ }
+ #contain button{
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    font-size: 18px;
+    
+
+ }
+ button:hover{
+    background-color: #f0b033;
+ }
+
+.mainchart img{
+    height: 620px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%); 
+    animation:img 20s ease-in-out; 
+}
+@keyframes img{
+    0% {
+      transform:translate(-50%,-50%) rotate(0deg);
+     }
+     100%{
+        transform:translate(-50%,-50%) rotateY(20deg);
+
+     }
+     
+      
+     }
+
+.morechar{
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+
+}
+
+.fighter{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    animation: fighter 10s linear;
+}
+
+
+
+
+.fighter img {
+    height: 150px;
+
+}
+.morechar h2{
+    color: white;
+    font-weight: 200px;
+    font-family: cursive;
+    line-height: 20px;
+}
+
